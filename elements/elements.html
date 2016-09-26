@@ -18730,12 +18730,19 @@ module.exports = Array.isArray || function (arr) {
       .flex-vertical {
         @apply(--layout-vertical);
       }
+      .flex-wrap{
+         @apply(--layout-wrap);
+      }
+      .bloc-competence{
+        margin: 2em 0;
+        width: 220px;
+      }
     </style>
     <div>
       <br>
       <h2>Compétences WEB</h2>
-      <div class="container flex-horizontal">
-        <div>
+      <div class="container flex-horizontal flex-wrap">
+        <div class="bloc-competence">
           <h3>Javascript</h3>
           <div role="listbox">
             <paper-icon-item>
@@ -18754,7 +18761,7 @@ module.exports = Array.isArray || function (arr) {
           </div>
         </div>
 
-        <div>
+        <div class="bloc-competence">
           <h3>Frameworks</h3>
           <div role="listbox">
             <paper-icon-item>
@@ -18768,7 +18775,7 @@ module.exports = Array.isArray || function (arr) {
           </div>
         </div>
 
-        <div>
+        <div class="bloc-competence">
           <h3>Design</h3>
           <div role="listbox">
             <paper-icon-item>
@@ -18790,7 +18797,7 @@ module.exports = Array.isArray || function (arr) {
           </div>
         </div>
 
-        <div>
+        <div class="bloc-competence">
           <h3>Back-end</h3>
           <div role="listbox">
             <paper-icon-item>
@@ -18816,7 +18823,7 @@ module.exports = Array.isArray || function (arr) {
           </div>
         </div>
 
-        <div>
+        <div class="bloc-competence">
           <h3>Concepts</h3>
           <div role="listbox">
             <paper-icon-item>
@@ -18840,8 +18847,7 @@ module.exports = Array.isArray || function (arr) {
 
       </div>
 
-      </div>
-    
+    </div>
   </template>
   <script>
   (function() {
@@ -18898,10 +18904,18 @@ module.exports = Array.isArray || function (arr) {
     <style>
       .flex-horizontal {
         @apply(--layout-horizontal);
-        @apply(--layout-justified);
+        @apply(--layout-around-justified);
       }
       .flex-vertical {
         @apply(--layout-vertical);
+      }
+      .flex-wrap{
+         @apply(--layout-wrap);
+      }
+      .bloc-site{
+        margin: 2em 0;
+        width: 30%;
+        min-width: 300px;
       }
       paper-card{
         margin-left: 1em;
@@ -18911,8 +18925,8 @@ module.exports = Array.isArray || function (arr) {
     <div>
       <br>
       <h2>Mes sites WEB</h2>
-      <div class="container flex-horizontal">
-        <div>
+      <div class="container flex-horizontal flex-wrap">
+        <div class="bloc-site">
           <paper-card image="images/datadoors.png" class="white">
             <div class="card-content"> Airbus DS - Geostore. Développement Front-end en équipe.</div>
             <div class="card-actions">
@@ -18921,7 +18935,7 @@ module.exports = Array.isArray || function (arr) {
           </paper-card>
         </div>
         
-        <div>
+        <div class="bloc-site">
           <paper-card image="images/geopetank.png" class="white">
             <div class="card-content">Développement du site en cours</div>
             <div class="card-actions">
@@ -18930,7 +18944,7 @@ module.exports = Array.isArray || function (arr) {
           </paper-card>
         </div>
         
-        <div>
+        <div class="bloc-site">
           <paper-card image="images/pbtennis.png" class="white">
             <div class="card-content">Développement du site</div>
             <div class="card-actions">
@@ -18939,7 +18953,6 @@ module.exports = Array.isArray || function (arr) {
           </paper-card>
         </div>
 
-        
       </div>
     </div>
   </template>
@@ -18974,11 +18987,16 @@ module.exports = Array.isArray || function (arr) {
       
       .flex-horizontal {
         @apply(--layout-horizontal);
-        @apply(--layout-justified);
       }
-      .flex-vertical {
-        @apply(--layout-vertical);
+      .flex-wrap{
+         @apply(--layout-wrap);
       }
+      .bloc-experience{
+        margin: 2em 0;
+        width: 50%;
+        min-width: 500px;
+      }
+      .around-justified { @apply(--layout-around-justified); }
       paper-card{
         margin-left: 1em;
         margin-right: 1em;
@@ -18986,145 +19004,140 @@ module.exports = Array.isArray || function (arr) {
   </style>
     <div>
       <h2>Mes Expériences</h2>
-      <div class="container flex-vertical">
-        <div class="container flex-horizontal">
-          <div>
-            <paper-card image="images/airbus.jpg">
-              <div class="card-content">
-                <div class="experience-header">
-                  Développement de logiciels de traitement de télémesures
-                </div>
-                <div class="experience_duree">
-                  <paper-icon-button icon="icons:event"></paper-icon-button>
-                  <span>2008 (stage de 5 mois)</span>
-                  <span>- 200 (stage de 6 mois)</span>
-                </div>
-                <div class="experience_detail">
-                  <ul>
-                    <li>Développement en cycle en V de logiciels de traitement de télémesures en perl</li>
-                    <li>Développement du backend d'administration des logiciels en PHP/MySQL</li>
-                    <li>Rédaction de documentations techniques</li>
-                    <li>Rédaction de devis industriels (travail de portage PERL vers JAVA)</li>
-                  </ul>
-                </div>
-                <p></p>
+      <div class="container flex-horizontal flex-wrap around-justified">
+
+        <div class="bloc-experience">
+          <paper-card image="images/airbus.jpg">
+            <div class="card-content">
+              <div class="experience-header">
+                Développement de logiciels de traitement de télémesures
               </div>
-              <div class="card-actions">
-                <p>Mots clés</p>
-                <div class="horizontal justified">
-                  <paper-button>Perl</paper-button>
-                  <paper-button>Php</paper-button>
-                  <paper-button>MySQL</paper-button>
-                  <paper-button>Java</paper-button>
-                </div>
+              <div class="experience_duree">
+                <paper-icon-button icon="icons:event"></paper-icon-button>
+                <span>2008 (stage de 5 mois)</span>
+                <span>- 200 (stage de 6 mois)</span>
               </div>
-            </paper-card>
-          </div>
-          <div>
-            <paper-card image="images/airbus.jpg">
-              <div class="card-content">
-                <div class="experience-header">
-                  Développement de logiciels de traitement de télémesures
-                </div>
-                <div class="experience_duree">
-                  <paper-icon-button icon="icons:event"></paper-icon-button>
-                  <span>2009 - 2010</span>
-                </div>
-                <div class="experience_detail">
-                  <ul>
-                    <li>Rétroingénierie de perl vers java</li>
-                    <li>Rédaction de spécifications techniques</li>
-                    <li>Développement de nouveaux logiciels en java</li>
-                    <li>Validation et recette des nouveaux logiciels</li>
-                  </ul>
-                </div>
+              <div class="experience_detail">
+                <ul>
+                  <li>Développement en cycle en V de logiciels de traitement de télémesures en perl</li>
+                  <li>Développement du backend d'administration des logiciels en PHP/MySQL</li>
+                  <li>Rédaction de documentations techniques</li>
+                  <li>Rédaction de devis industriels (travail de portage PERL vers JAVA)</li>
+                </ul>
               </div>
-              <div class="card-actions">
-                <p>Mots clés</p>
-                <div class="horizontal justified">
-                  <paper-button>Perl</paper-button>
-                  <paper-button>Java</paper-button>
-                  <paper-button>Rétroingénierie</paper-button>
-                </div>
+              <p></p>
+            </div>
+            <div class="card-actions">
+              <p>Mots clés</p>
+              <div class="horizontal justified">
+                <paper-button>Perl</paper-button>
+                <paper-button>Php</paper-button>
+                <paper-button>MySQL</paper-button>
+                <paper-button>Java</paper-button>
               </div>
-            </paper-card>
-          </div>
+            </div>
+          </paper-card>
         </div>
-      </div>
-      <br>
-      <div class="container flex-vertical">
-        <div class="container flex-horizontal">
-          <div>
-            <paper-card image="images/airbus.jpg">
-              <div class="card-content">
-                <div class="experience-header">
-                  Création d’un outil WEB de support à l’exploitation d’un système opérationnel de contrôle satellite
-                </div>
-                <div class="experience_duree">
-                  <paper-icon-button icon="icons:event"></paper-icon-button>
-                  <span>2011 - 2013</span>
-                </div>
-                <div class="experience_detail">
-                  <ul>
-                    <li>Conception d'un outil de type Client / Serveur</li>
-                    <li>Compréhension des besoins clients, force de proposition</li>
-                    <li>Manipulation et traitement de grandes quantités de données</li>
-                    <li>Gestion et administration de bases de données MySQL</li>
-                    <li>Web-ergonomie (jQuery, Ajax, HTML 5, CSS 3)</li>
-                  </ul>
-                </div>
+        <div class="bloc-experience">
+          <paper-card image="images/airbus.jpg">
+            <div class="card-content">
+              <div class="experience-header">
+                Développement de logiciels de traitement de télémesures
               </div>
-              <div class="card-actions">
-                <p>Mots clés</p>
-                <div class="horizontal justified">
-                  <paper-button>PHP</paper-button>
-                  <paper-button>MySQL</paper-button>
-                  <paper-button>HTML5</paper-button>
-                  <paper-button>CSS3</paper-button>
-                  <paper-button>jQuery</paper-button>
-                  <paper-button>Ajax</paper-button>
-                  <paper-button>Highcharts</paper-button>
-                  <paper-button>Bootstrap</paper-button>
-                </div>
+              <div class="experience_duree">
+                <paper-icon-button icon="icons:event"></paper-icon-button>
+                <span>2009 - 2010</span>
               </div>
-            </paper-card>
-          </div>
-          <div>
-            <paper-card image="images/airbus.jpg">
-              <div class="card-content">
-                <div class="experience-header">
-                  Développement d'un site web de commande en ligne des images d'archive et programmation des satellites: Datadoors
-                </div>
-                <div class="experience_duree">
-                  <paper-icon-button icon="icons:event"></paper-icon-button>
-                  <span>2014 - 2015</span>
-                </div>
-                <div class="experience_detail">
-                  <ul>
-                    <li>Travail en équipe</li>
-                    <li>Rédaction de propositions techniques</li>
-                    <li>Développement du Front-end avec HTML 5, CSS 3, SaSS, AngularJS, Bootstrap, Material design</li>
-                    <li>Manipulation et création de SVG</li>
-                    <li>Ecriture de tests unitaires (karma) et tests end-to-end (protractor)</li>
-                  </ul>
-                </div>
+              <div class="experience_detail">
+                <ul>
+                  <li>Rétroingénierie de perl vers java</li>
+                  <li>Rédaction de spécifications techniques</li>
+                  <li>Développement de nouveaux logiciels en java</li>
+                  <li>Validation et recette des nouveaux logiciels</li>
+                </ul>
               </div>
-              <div class="card-actions">
-                <p>Mots clés</p>
-                <div class="horizontal justified">
-                  <paper-button>AngularJS</paper-button>
-                  <paper-button>HTML5</paper-button>
-                  <paper-button>CSS3</paper-button>
-                  <paper-button>SaSS</paper-button>
-                  <paper-button>Bootstrap</paper-button>
-                  <paper-button>Material Design</paper-button>
-                  <paper-button>Karma</paper-button>
-                  <paper-button>Protractor</paper-button>
-                </div>
+            </div>
+            <div class="card-actions">
+              <p>Mots clés</p>
+              <div class="horizontal justified">
+                <paper-button>Perl</paper-button>
+                <paper-button>Java</paper-button>
+                <paper-button>Rétroingénierie</paper-button>
               </div>
-            </paper-card>
-          </div>
+            </div>
+          </paper-card>
         </div>
+        <div class="bloc-experience">
+          <paper-card image="images/airbus.jpg">
+            <div class="card-content">
+              <div class="experience-header">
+                Création d’un outil WEB de support à l’exploitation d’un système opérationnel de contrôle satellite
+              </div>
+              <div class="experience_duree">
+                <paper-icon-button icon="icons:event"></paper-icon-button>
+                <span>2011 - 2013</span>
+              </div>
+              <div class="experience_detail">
+                <ul>
+                  <li>Conception d'un outil de type Client / Serveur</li>
+                  <li>Compréhension des besoins clients, force de proposition</li>
+                  <li>Manipulation et traitement de grandes quantités de données</li>
+                  <li>Gestion et administration de bases de données MySQL</li>
+                  <li>Web-ergonomie (jQuery, Ajax, HTML 5, CSS 3)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-actions">
+              <p>Mots clés</p>
+              <div class="horizontal justified">
+                <paper-button>PHP</paper-button>
+                <paper-button>MySQL</paper-button>
+                <paper-button>HTML5</paper-button>
+                <paper-button>CSS3</paper-button>
+                <paper-button>jQuery</paper-button>
+                <paper-button>Ajax</paper-button>
+                <paper-button>Highcharts</paper-button>
+                <paper-button>Bootstrap</paper-button>
+              </div>
+            </div>
+          </paper-card>
+        </div>
+        <div class="bloc-experience">
+          <paper-card image="images/airbus.jpg">
+            <div class="card-content">
+              <div class="experience-header">
+                Développement d'un site web de commande en ligne des images d'archive et programmation des satellites: Datadoors
+              </div>
+              <div class="experience_duree">
+                <paper-icon-button icon="icons:event"></paper-icon-button>
+                <span>2014 - 2015</span>
+              </div>
+              <div class="experience_detail">
+                <ul>
+                  <li>Travail en équipe</li>
+                  <li>Rédaction de propositions techniques</li>
+                  <li>Développement du Front-end avec HTML 5, CSS 3, SaSS, AngularJS, Bootstrap, Material design</li>
+                  <li>Manipulation et création de SVG</li>
+                  <li>Ecriture de tests unitaires (karma) et tests end-to-end (protractor)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-actions">
+              <p>Mots clés</p>
+              <div class="horizontal justified">
+                <paper-button>AngularJS</paper-button>
+                <paper-button>HTML5</paper-button>
+                <paper-button>CSS3</paper-button>
+                <paper-button>SaSS</paper-button>
+                <paper-button>Bootstrap</paper-button>
+                <paper-button>Material Design</paper-button>
+                <paper-button>Karma</paper-button>
+                <paper-button>Protractor</paper-button>
+              </div>
+            </div>
+          </paper-card>
+        </div>
+
       </div>
 
     </div>
