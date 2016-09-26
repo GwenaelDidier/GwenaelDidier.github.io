@@ -18730,6 +18730,7 @@ module.exports = Array.isArray || function (arr) {
       .flex-vertical {
         @apply(--layout-vertical);
       }
+<<<<<<< HEAD
     </style>
     <div>
       <br>
@@ -24422,12 +24423,152 @@ Polymer({
 });
 </script>
 
+=======
+      .flex-wrap{
+         @apply(--layout-wrap);
+      }
+      .bloc-competence{
+        margin: 2em 0;
+        width: 220px;
+      }
+    </style>
+    <div>
+      <br>
+      <h2>Compétences WEB</h2>
+      <div class="container flex-horizontal flex-wrap">
+        <div class="bloc-competence">
+          <h3>Javascript</h3>
+          <div role="listbox">
+            <paper-icon-item>
+              <iron-icon src="../images/SVG/icon-angular.svg" item-icon=""></iron-icon>
+              AngularJS
+            </paper-icon-item>
+            <paper-icon-item>
+              <iron-icon src="../images/SVG/icon-polymer.svg" item-icon=""></iron-icon>
+              Polymer
+            </paper-icon-item>
+            <paper-icon-item>
+              <iron-icon src="../images/SVG/icon-jquery.svg" item-icon=""></iron-icon>
+              jQuery
+            </paper-icon-item>
+            
+          </div>
+        </div>
+
+        <div class="bloc-competence">
+          <h3>Frameworks</h3>
+          <div role="listbox">
+            <paper-icon-item>
+              <iron-icon src="../images/SVG/icon-bootstrap.svg" item-icon=""></iron-icon>
+              Twitter Bootstrap
+            </paper-icon-item>
+            <paper-icon-item>
+              <iron-icon src="../images/icon-materialdesign.png" item-icon=""></iron-icon>
+              Google Material Design
+            </paper-icon-item>
+          </div>
+        </div>
+
+        <div class="bloc-competence">
+          <h3>Design</h3>
+          <div role="listbox">
+            <paper-icon-item>
+              <iron-icon src="../images/SVG/icon-html5.svg" item-icon=""></iron-icon>
+                HTML 5
+            </paper-icon-item>
+            <paper-icon-item>
+              <iron-icon src="../images/SVG/icon-css3.svg" item-icon=""></iron-icon>
+              CSS 3
+            </paper-icon-item>
+            <paper-icon-item>
+              <iron-icon src="../images/SVG/icon-sass.svg" item-icon=""></iron-icon>
+              SaSS
+            </paper-icon-item>
+            <paper-icon-item>
+              <iron-icon src="../images/SVG/icon-svg.svg" item-icon=""></iron-icon>
+              SVG
+            </paper-icon-item>
+          </div>
+        </div>
+
+        <div class="bloc-competence">
+          <h3>Back-end</h3>
+          <div role="listbox">
+            <paper-icon-item>
+              <iron-icon src="../images/SVG/icon-php.svg" item-icon=""></iron-icon>
+              PHP
+            </paper-icon-item>
+            <paper-icon-item>
+              <iron-icon src="../images/SVG/icon-zend.svg" item-icon=""></iron-icon>
+              Zend 2
+            </paper-icon-item>
+            <paper-icon-item>
+              <iron-icon src="../images/icon-symfony.png" item-icon=""></iron-icon>
+              Symfony
+            </paper-icon-item>
+            <paper-icon-item>
+              <iron-icon src="../images/SVG/icon-mysql.svg" item-icon=""></iron-icon>
+              SQL
+            </paper-icon-item>
+            <paper-icon-item>
+              <iron-icon src="../images/SVG/icon-node.svg" item-icon=""></iron-icon>
+              Node JS
+            </paper-icon-item>
+          </div>
+        </div>
+
+        <div class="bloc-competence">
+          <h3>Concepts</h3>
+          <div role="listbox">
+            <paper-icon-item>
+              <iron-icon src="../images/icon-uml.png" item-icon=""></iron-icon>
+              UML
+            </paper-icon-item>
+            <paper-icon-item>
+              <iron-icon src="../images/icon-agile.png" item-icon=""></iron-icon>
+              Agilité
+            </paper-icon-item>
+            <paper-icon-item>
+              <iron-icon src="../images/icon-poo.png" item-icon=""></iron-icon>
+              POO
+            </paper-icon-item>
+            <paper-icon-item>
+              <iron-icon src="../images/icon-mvc.png" item-icon=""></iron-icon>
+              MVC
+            </paper-icon-item>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </template>
+  <script>
+  (function() {
+    'use strict';
+
+    Polymer({
+      is: 'my-competences',
+
+      properties: {
+        foo: {
+          type: String,
+          value: 'my-competences',
+          notify: true
+        }
+      }
+    });
+  })();
+  </script>
+</dom-module>
+>>>>>>> develop
 <dom-module id="my-map" assetpath="my-map/">
   <template>
     <style>
       :host {
         display: block;
       }
+<<<<<<< HEAD
       google-map {
         height: 400px;
       }
@@ -24474,6 +24615,14 @@ Polymer({
       </div>
     </div>
     
+=======
+      .map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+    <div id="map" class="map"></div>
+>>>>>>> develop
   </template>
 
   <script>
@@ -24499,11 +24648,26 @@ Polymer({
     <style>
       .flex-horizontal {
         @apply(--layout-horizontal);
+<<<<<<< HEAD
         @apply(--layout-justified);
+=======
+        @apply(--layout-around-justified);
+>>>>>>> develop
       }
       .flex-vertical {
         @apply(--layout-vertical);
       }
+<<<<<<< HEAD
+=======
+      .flex-wrap{
+         @apply(--layout-wrap);
+      }
+      .bloc-site{
+        margin: 2em 0;
+        width: 30%;
+        min-width: 300px;
+      }
+>>>>>>> develop
       paper-card{
         margin-left: 1em;
         margin-right: 1em;
@@ -24512,6 +24676,7 @@ Polymer({
     <div>
       <br>
       <h2>Mes sites WEB</h2>
+<<<<<<< HEAD
       <div class="container flex-horizontal">
         <div>
           <paper-card image="images/datadoors.png" class="white">
@@ -24520,10 +24685,19 @@ Polymer({
               <a href="http://www.intelligence-airbusds.com/fr/5114-parcourir-et-commander" target="_blank">
                 <paper-button noink="">Voir</paper-button>
               </a>
+=======
+      <div class="container flex-horizontal flex-wrap">
+        <div class="bloc-site">
+          <paper-card image="images/datadoors.png" class="white">
+            <div class="card-content"> Airbus DS - Geostore. Développement Front-end en équipe.</div>
+            <div class="card-actions">
+              <paper-button noink="">Voir</paper-button>
+>>>>>>> develop
             </div>
           </paper-card>
         </div>
         
+<<<<<<< HEAD
         <div>
           <paper-card image="images/geopetank.png" class="white">
             <div class="card-content">Développement du site en cours</div>
@@ -24531,10 +24705,18 @@ Polymer({
               <a href="http://geopetank.fr/#/" target="_blank">
                 <paper-button noink="">Voir</paper-button>
               </a>
+=======
+        <div class="bloc-site">
+          <paper-card image="images/geopetank.png" class="white">
+            <div class="card-content">Développement du site en cours</div>
+            <div class="card-actions">
+               <paper-button noink="">Voir</paper-button>
+>>>>>>> develop
             </div>
           </paper-card>
         </div>
         
+<<<<<<< HEAD
         <div>
           <paper-card image="images/pbtennis.png" class="white">
             <div class="card-content">Développement du site</div>
@@ -24542,11 +24724,21 @@ Polymer({
               <a href="http://tennistage31.com/" target="_blank">
                 <paper-button noink="">Voir</paper-button>
               </a>
+=======
+        <div class="bloc-site">
+          <paper-card image="images/pbtennis.png" class="white">
+            <div class="card-content">Développement du site</div>
+            <div class="card-actions">
+               <paper-button noink="">Voir</paper-button>
+>>>>>>> develop
             </div>
           </paper-card>
         </div>
 
+<<<<<<< HEAD
         
+=======
+>>>>>>> develop
       </div>
     </div>
   </template>
@@ -24581,15 +24773,29 @@ Polymer({
       
       .flex-horizontal {
         @apply(--layout-horizontal);
+<<<<<<< HEAD
         @apply(--layout-justified);
       }
       .flex-vertical {
         @apply(--layout-vertical);
       }
+=======
+      }
+      .flex-wrap{
+         @apply(--layout-wrap);
+      }
+      .bloc-experience{
+        margin: 2em 0;
+        width: 50%;
+        min-width: 500px;
+      }
+      .around-justified { @apply(--layout-around-justified); }
+>>>>>>> develop
       paper-card{
         margin-left: 1em;
         margin-right: 1em;
       }
+<<<<<<< HEAD
       
       .experience-image{
         --paper-card-header-image: {
@@ -24743,6 +24949,145 @@ Polymer({
             </paper-card>
           </div>
         </div>
+=======
+  </style>
+    <div>
+      <h2>Mes Expériences</h2>
+      <div class="container flex-horizontal flex-wrap around-justified">
+
+        <div class="bloc-experience">
+          <paper-card image="images/airbus.jpg">
+            <div class="card-content">
+              <div class="experience-header">
+                Développement de logiciels de traitement de télémesures
+              </div>
+              <div class="experience_duree">
+                <paper-icon-button icon="icons:event"></paper-icon-button>
+                <span>2008 (stage de 5 mois)</span>
+                <span>- 200 (stage de 6 mois)</span>
+              </div>
+              <div class="experience_detail">
+                <ul>
+                  <li>Développement en cycle en V de logiciels de traitement de télémesures en perl</li>
+                  <li>Développement du backend d'administration des logiciels en PHP/MySQL</li>
+                  <li>Rédaction de documentations techniques</li>
+                  <li>Rédaction de devis industriels (travail de portage PERL vers JAVA)</li>
+                </ul>
+              </div>
+              <p></p>
+            </div>
+            <div class="card-actions">
+              <p>Mots clés</p>
+              <div class="horizontal justified">
+                <paper-button>Perl</paper-button>
+                <paper-button>Php</paper-button>
+                <paper-button>MySQL</paper-button>
+                <paper-button>Java</paper-button>
+              </div>
+            </div>
+          </paper-card>
+        </div>
+        <div class="bloc-experience">
+          <paper-card image="images/airbus.jpg">
+            <div class="card-content">
+              <div class="experience-header">
+                Développement de logiciels de traitement de télémesures
+              </div>
+              <div class="experience_duree">
+                <paper-icon-button icon="icons:event"></paper-icon-button>
+                <span>2009 - 2010</span>
+              </div>
+              <div class="experience_detail">
+                <ul>
+                  <li>Rétroingénierie de perl vers java</li>
+                  <li>Rédaction de spécifications techniques</li>
+                  <li>Développement de nouveaux logiciels en java</li>
+                  <li>Validation et recette des nouveaux logiciels</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-actions">
+              <p>Mots clés</p>
+              <div class="horizontal justified">
+                <paper-button>Perl</paper-button>
+                <paper-button>Java</paper-button>
+                <paper-button>Rétroingénierie</paper-button>
+              </div>
+            </div>
+          </paper-card>
+        </div>
+        <div class="bloc-experience">
+          <paper-card image="images/airbus.jpg">
+            <div class="card-content">
+              <div class="experience-header">
+                Création d’un outil WEB de support à l’exploitation d’un système opérationnel de contrôle satellite
+              </div>
+              <div class="experience_duree">
+                <paper-icon-button icon="icons:event"></paper-icon-button>
+                <span>2011 - 2013</span>
+              </div>
+              <div class="experience_detail">
+                <ul>
+                  <li>Conception d'un outil de type Client / Serveur</li>
+                  <li>Compréhension des besoins clients, force de proposition</li>
+                  <li>Manipulation et traitement de grandes quantités de données</li>
+                  <li>Gestion et administration de bases de données MySQL</li>
+                  <li>Web-ergonomie (jQuery, Ajax, HTML 5, CSS 3)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-actions">
+              <p>Mots clés</p>
+              <div class="horizontal justified">
+                <paper-button>PHP</paper-button>
+                <paper-button>MySQL</paper-button>
+                <paper-button>HTML5</paper-button>
+                <paper-button>CSS3</paper-button>
+                <paper-button>jQuery</paper-button>
+                <paper-button>Ajax</paper-button>
+                <paper-button>Highcharts</paper-button>
+                <paper-button>Bootstrap</paper-button>
+              </div>
+            </div>
+          </paper-card>
+        </div>
+        <div class="bloc-experience">
+          <paper-card image="images/airbus.jpg">
+            <div class="card-content">
+              <div class="experience-header">
+                Développement d'un site web de commande en ligne des images d'archive et programmation des satellites: Datadoors
+              </div>
+              <div class="experience_duree">
+                <paper-icon-button icon="icons:event"></paper-icon-button>
+                <span>2014 - 2015</span>
+              </div>
+              <div class="experience_detail">
+                <ul>
+                  <li>Travail en équipe</li>
+                  <li>Rédaction de propositions techniques</li>
+                  <li>Développement du Front-end avec HTML 5, CSS 3, SaSS, AngularJS, Bootstrap, Material design</li>
+                  <li>Manipulation et création de SVG</li>
+                  <li>Ecriture de tests unitaires (karma) et tests end-to-end (protractor)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-actions">
+              <p>Mots clés</p>
+              <div class="horizontal justified">
+                <paper-button>AngularJS</paper-button>
+                <paper-button>HTML5</paper-button>
+                <paper-button>CSS3</paper-button>
+                <paper-button>SaSS</paper-button>
+                <paper-button>Bootstrap</paper-button>
+                <paper-button>Material Design</paper-button>
+                <paper-button>Karma</paper-button>
+                <paper-button>Protractor</paper-button>
+              </div>
+            </div>
+          </paper-card>
+        </div>
+
+>>>>>>> develop
       </div>
 
     </div>
@@ -24765,6 +25110,7 @@ Polymer({
   })();
   </script>
 </dom-module>
+<<<<<<< HEAD
 <dom-module id="my-contact" assetpath="my-contact/">
   <template>
     <style is="custom-style">
@@ -24854,4 +25200,6 @@ Polymer({
   })();
   </script>
 </dom-module>
+=======
+>>>>>>> develop
 </div></body></html>
